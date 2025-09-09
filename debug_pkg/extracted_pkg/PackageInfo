@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pkg-info overwrite-permissions="true" relocatable="false" identifier="com.stevenssparks.adventurerealms.complete" postinstall-action="none" version="1.0.3" format-version="2" generator-version="InstallCmds-860.14 (24G90)" install-location="/" auth="root">
+    <payload numberOfFiles="29" installKBytes="75808"/>
+    <bundle path="./Applications/AdventureRealms.app" id="com.stevenssparks.adventurerealms" CFBundleShortVersionString="1.0.3" CFBundleVersion="1.0.3"/>
+    <bundle-version>
+        <bundle id="com.stevenssparks.adventurerealms"/>
+    </bundle-version>
+    <upgrade-bundle>
+        <bundle id="com.stevenssparks.adventurerealms"/>
+    </upgrade-bundle>
+    <update-bundle/>
+    <atomic-update-bundle/>
+    <strict-identifier>
+        <bundle id="com.stevenssparks.adventurerealms"/>
+    </strict-identifier>
+    <relocate>
+        <bundle id="com.stevenssparks.adventurerealms"/>
+    </relocate>
+</pkg-info>

@@ -1,0 +1,18 @@
+#!/bin/bash
+# Adventure Realms GUI Launcher - Opens in Terminal when double-clicked
+
+# Get the directory of the actual executable
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+EXECUTABLE="$SCRIPT_DIR/AdventureRealms"
+
+# Check if we're running in a terminal environment
+if [ -t 0 ]; then
+    # We have a terminal, run directly
+    exec "$EXECUTABLE" "$@"
+else
+    # No terminal, launch in Terminal.app with proper close
+    osascript -e "
+    tell application \"Terminal\"
+        set newWindow to do script \"cd '$SCRIPT_DIR' && './AdventureRealms'; osascript -e 'tell application \\\"Terminal\\\" to close (window 1)' &; echo 'Adventure Realms has exited.'; sleep 1\"
+    end tell"
+fi
